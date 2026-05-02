@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jastip Caca</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #fff7f9;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #ff4d6d;
+      text-align: center;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Order Jastip Caca 💖</h2>
+
+  <input type="text" id="nama" placeholder="Nama">
+  <input type="text" id="pesanan" placeholder="Pesanan">
+  <textarea id="alamat" placeholder="Alamat"></textarea>
+  <textarea id="catatan" placeholder="Catatan (opsional)"></textarea>
+
+  <button onclick="kirimWA()">Order Sekarang</button>
+</div>
+
+<script>
+function kirimWA() {
+  var nama = document.getElementById("nama").value;
+  var pesanan = document.getElementById("pesanan").value;
+  var alamat = document.getElementById("alamat").value;
+  var catatan = document.getElementById("catatan").value;
+
+  var nomor = "6281232637336"; // GANTI dengan nomor kamu
+
+  var text = "Halo Caca Jastip,%0A%0ASaya mau order:%0A" +
+             "Nama: " + nama + "%0A" +
+             "Pesanan: " + pesanan + "%0A" +
+             "Alamat: " + alamat + "%0A" +
+             "Catatan: " + catatan;
+
+  window.open("https://wa.me/" + nomor + "?text=" + text);
+}
+</script>
+
+</body>
+</html>
